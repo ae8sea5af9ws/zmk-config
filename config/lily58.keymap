@@ -144,6 +144,7 @@
 #define _L3      &layer 3 3
 #define _L4      &layer 4 4
 #define _L5      &layer 5 5
+#define _L6      &layer 6 6
 
 #define ____      &none
 #define mmmm      &none
@@ -153,46 +154,53 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_L2  _SCR _L1  _O   _F15 _SAV           _K   _D   _R   _L   _P   _F
+_L3  _SCR _L2  _O   _L1  _ESC           _K   _D   _R   _L   _P   _F
 _Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
-_ESC _F12 _F14 _L3  _BS  _F2            _Q   _G   _Z   _V   _W   _J
-____ ____ ____ ____ _L5  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
-               ____ _L4  _A   _ATB _CAP _H   ____ ____ 
+_F12 _F14 mmmm _L4  _BS  _F2            _Q   _G   _Z   _V   _W   _J
+____ ____ ____ ____ _L6  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
+               ____ _L5  _A   _ATB _CAP _H   mmmm ____ 
         >; };
         l1 { bindings = <
-_FND _TBL xxxx _TBR mmmm mmmm           mmmm _N1  _N2  _N3  mmmm _PNT
-_TBB _TBC mmmm _TBN _SP  mmmm           _HSH _N4  _N5  _N6  _COM _QMK
-_F16 mmmm mmmm mmmm mmmm ____           mmmm _N7  _N8  _N9  _AT  mmmm
-____ ____ ____ ____ _MB2 mmmm ____ ____ mmmm _N0  ____ ____ ____ ____
-               ____ _MB1 _MB3 _ATB mmmm _DOT ____ ____
+_F15 _F16 mmmm mmmm xxxx mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm _SP  mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
+____ ____ ____ ____ _MB3 mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
+               ____ _MB2 _MB1 _ATB mmmm mmmm mmmm ____
         >; };
         l2 { bindings = <
+mmmm mmmm xxxx _SAV mmmm mmmm           mmmm _N1  _N2  _N3  mmmm _PNT
+mmmm mmmm mmmm mmmm _SP  mmmm           _HSH _N4  _N5  _N6  _COM _QMK
+mmmm mmmm mmmm mmmm mmmm ____           mmmm _N7  _N8  _N9  _AT  mmmm
+____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _N0  ____ ____ ____ ____
+               ____ _F17 _F18 _ATB mmmm _DOT mmmm ____
+        >; };
+        l3 { bindings = <
 xxxx mmmm mmmm mmmm _RDO mmmm           mmmm _LBR _GRV _RBR mmmm _DLR
 mmmm mmmm mmmm mmmm _SP  mmmm           _SCL _LPR _DQT _RPR _COM _CL
 mmmm mmmm mmmm mmmm mmmm ____           mmmm _LBK _SQT _RBK _UND mmmm
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ mmmm _UDO _ATB mmmm _DOT ____ ____
+               ____ mmmm _UDO _ATB mmmm _DOT mmmm ____
         >; };
-        l3 { bindings = <
+        l4 { bindings = <
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _PIP _FSH _AMP mmmm _AST
 mmmm mmmm mmmm mmmm _SP  mmmm           _CRT _LT  _EQL _GT  _COM _EXL
 mmmm mmmm mmmm xxxx _CBS ____           mmmm _MNS _BSH _PLS _TLD mmmm
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ _F17 _F18 _ATB mmmm _DOT ____ ____
-        >; };
-        l4 { bindings = <
-mmmm _CP  _ALL _PS  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-_CUT _SCP mmmm _SPS mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ xxxx mmmm mmmm mmmm mmmm ____ ____
+               ____ mmmm mmmm _ATB mmmm _DOT mmmm ____
         >; };
         l5 { bindings = <
-mmmm mmmm mmmm _UP  _TAB mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm _SCP mmmm _SPS mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm _CUT _CP  _ALL _PS  mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
+____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
+               ____ xxxx mmmm mmmm mmmm mmmm mmmm ____
+        >; };
+        l6 { bindings = <
+_TAB mmmm mmmm _UP  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm _LFT _DWN _RHT mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ xxxx mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ mmmm mmmm mmmm mmmm mmmm ____ ____
+               ____ mmmm mmmm mmmm mmmm mmmm mmmm ____
         >; };
     };
     behaviors {
